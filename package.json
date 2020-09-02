@@ -1,0 +1,56 @@
+{
+  "name": "fakturoid",
+  "version": "1.0.0",
+  "description": "Fakturoid API v2 TypeScript implementation",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "build": "tsc --project .",
+    "docs": "typedoc",
+    "test": "mocha -r ts-node/register test/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alirun/fakturoid-js.git"
+  },
+  "files": [
+    "/lib"
+  ],
+  "keywords": [
+    "Fakturoid",
+    "API",
+    "TypeScript",
+    "JavaScript"
+  ],
+  "author": "Ali Nuraldin",
+  "contributors": [
+    {
+      "name": "Ali Nuraldin",
+      "email": "ali@opium.team"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alirun/fakturoid-js/issues"
+  },
+  "homepage": "https://github.com/alirun/fakturoid-js#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.26",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.5.0",
+    "husky": "^4.2.5",
+    "typedoc": "^0.17.8",
+    "typescript": "^3.9.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run docs && cp docs-template/.nojekyll docs/.nojekyll && git add docs",
+      "pre-push": "npm run build && npm run lint"
+    }
+  }
+}
