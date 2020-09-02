@@ -72,11 +72,21 @@ module.exports = {
     '@typescript-eslint/explicit-member-accessibility': [
       'error'
     ],
-    '@typescript-eslint/member-naming': [
+    '@typescript-eslint/naming-convention': [
       'error',
       {
-        'private': '^_',
-        'protected': '^_'
+        'selector': 'memberLike',
+        'modifiers': ['private', 'protected'],
+        'format': ['camelCase'],
+        'leadingUnderscore': 'require'
+      },
+      {
+        'selector': 'interface',
+        'format': ['PascalCase'],
+        'custom': {
+          'regex': '^I[A-Z]',
+          'match': true
+        }
       }
     ],
     '@typescript-eslint/member-delimiter-style': [
@@ -91,10 +101,6 @@ module.exports = {
           'requireLast': false
         }
       }
-    ],
-    '@typescript-eslint/interface-name-prefix': [
-      'error',
-      { 'prefixWithI': 'always' }
     ],
     '@typescript-eslint/no-empty-function': [
       'off'
