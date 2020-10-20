@@ -1,4 +1,4 @@
-import axios, { Method } from 'axios'
+import axios, { Method, AxiosError, AxiosResponse } from 'axios'
 
 import { ApiError, getErrorNameByStatusCode } from '../Utils/errors'
 
@@ -9,13 +9,15 @@ export default class ApiEntity {
     protected readonly _authHeader: {
       username: string
       password: string
-    }
+    },
+    protected readonly _email: string,
+    protected readonly _token: string,
   ) {}
 
   protected _request<TRequestBody, TResponseBody>({
     method,
     path,
-    data
+    data,
   }: {
     method: Method
     path: string
@@ -24,12 +26,18 @@ export default class ApiEntity {
     return axios({
       method,
       url: `${this._endpoint}/${path}`,
-      data
+      data,
+      headers: {
+        'User-Agent': this._userAgentHeader,
+        'Authorization': 'Basic ' + new Buffer(this._email + ':' + this._token).toString('base64'),
+        'Content-type': 'application/json'
+      }
     })
-      .then(response => {
+      .then((response: AxiosResponse) => {
         return response.data
       })
-      .catch(error => {
+      .catch((error: AxiosError) => {
+        console.log(error)
         if (error.response) {
           throw new ApiError(
             getErrorNameByStatusCode(error.response.status),

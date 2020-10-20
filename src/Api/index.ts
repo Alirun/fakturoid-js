@@ -52,6 +52,6 @@ export default class Api {
       password: this._options.credentials.apiKey
     }
 
-    this.subjects = new Subjects(this._endpoint, this._userAgentHeader, this._authHeader)
+    this.subjects = new Subjects(this._endpoint, this._userAgentHeader, this._authHeader, this._options.credentials.email, this._options.credentials.apiKey)
   }
 }
