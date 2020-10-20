@@ -96,7 +96,9 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external"><a href="_api_apientity_.apientity.html#_authheader" class="tsd-kind-icon">_auth<wbr>Header</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external"><a href="_api_apientity_.apientity.html#_email" class="tsd-kind-icon">_email</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external"><a href="_api_apientity_.apientity.html#_endpoint" class="tsd-kind-icon">_endpoint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external"><a href="_api_apientity_.apientity.html#_token" class="tsd-kind-icon">_token</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external"><a href="_api_apientity_.apientity.html#_useragentheader" class="tsd-kind-icon">_user<wbr>Agent<wbr>Header</a></li>
 							</ul>
 						</section>
@@ -115,13 +117,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Api<wbr>Entity<span class="tsd-signature-symbol">(</span>_endpoint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, _userAgentHeader<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, _authHeader<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_api_apientity_.apientity.html" class="tsd-signature-type">ApiEntity</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Api<wbr>Entity<span class="tsd-signature-symbol">(</span>_endpoint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, _userAgentHeader<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, _authHeader<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span>, _email<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, _token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_api_apientity_.apientity.html" class="tsd-signature-type">ApiEntity</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/c29ec7d/src/Api/ApiEntity.ts#L5">src/Api/ApiEntity.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/14c5309/src/Api/ApiEntity.ts#L5">src/Api/ApiEntity.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -143,6 +145,12 @@
 										</li>
 									</ul>
 								</li>
+								<li>
+									<h5>_email: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>_token: <span class="tsd-signature-type">string</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_api_apientity_.apientity.html" class="tsd-signature-type">ApiEntity</a></h4>
 						</li>
@@ -157,7 +165,7 @@
 					<div class="tsd-signature tsd-kind-icon">_auth<wbr>Header<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/c29ec7d/src/Api/ApiEntity.ts#L9">src/Api/ApiEntity.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/14c5309/src/Api/ApiEntity.ts#L9">src/Api/ApiEntity.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -173,12 +181,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
+					<a name="_email" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> _email</h3>
+					<div class="tsd-signature tsd-kind-icon">_email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/14c5309/src/Api/ApiEntity.ts#L13">src/Api/ApiEntity.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
 					<a name="_endpoint" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> _endpoint</h3>
 					<div class="tsd-signature tsd-kind-icon">_endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/c29ec7d/src/Api/ApiEntity.ts#L7">src/Api/ApiEntity.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/14c5309/src/Api/ApiEntity.ts#L7">src/Api/ApiEntity.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
+					<a name="_token" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> _token</h3>
+					<div class="tsd-signature tsd-kind-icon">_token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/14c5309/src/Api/ApiEntity.ts#L14">src/Api/ApiEntity.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -188,7 +216,7 @@
 					<div class="tsd-signature tsd-kind-icon">_user<wbr>Agent<wbr>Header<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/c29ec7d/src/Api/ApiEntity.ts#L8">src/Api/ApiEntity.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/14c5309/src/Api/ApiEntity.ts#L8">src/Api/ApiEntity.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -205,7 +233,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/c29ec7d/src/Api/ApiEntity.ts#L15">src/Api/ApiEntity.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/Alirun/fakturoid-js/blob/14c5309/src/Api/ApiEntity.ts#L17">src/Api/ApiEntity.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -280,7 +308,13 @@
 								<a href="_api_apientity_.apientity.html#_authheader" class="tsd-kind-icon">_auth<wbr>Header</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
+								<a href="_api_apientity_.apientity.html#_email" class="tsd-kind-icon">_email</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
 								<a href="_api_apientity_.apientity.html#_endpoint" class="tsd-kind-icon">_endpoint</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
+								<a href="_api_apientity_.apientity.html#_token" class="tsd-kind-icon">_token</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
 								<a href="_api_apientity_.apientity.html#_useragentheader" class="tsd-kind-icon">_user<wbr>Agent<wbr>Header</a>
