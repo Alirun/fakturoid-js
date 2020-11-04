@@ -1,4 +1,4 @@
-import axios, { Method, AxiosError, AxiosResponse } from 'axios'
+import axios, { Method, AxiosError, AxiosResponse, ResponseType } from 'axios'
 
 import { ApiError, getErrorNameByStatusCode } from '../Utils/errors'
 
@@ -18,10 +18,12 @@ export default class ApiEntity {
     method,
     path,
     data,
+    responseType
   }: {
     method: Method
     path: string
     data?: TRequestBody
+    responseType?: ResponseType
   }): Promise<TResponseBody> {
     return axios({
       method,
@@ -29,9 +31,10 @@ export default class ApiEntity {
       data,
       headers: {
         'User-Agent': this._userAgentHeader,
-        'Authorization': 'Basic ' + new Buffer(this._email + ':' + this._token).toString('base64'),
+        'Authorization': 'Basic ' + Buffer.from(this._email + ':' + this._token).toString('base64'),
         'Content-type': 'application/json'
-      }
+      },
+      responseType
     })
       .then((response: AxiosResponse) => {
         return response.data

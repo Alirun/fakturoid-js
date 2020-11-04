@@ -34,6 +34,7 @@ export default class Subjects extends ApiEntity {
     return await this._request({
       method: 'GET',
       path: args.path,
+      responseType: 'arraybuffer'
     })
   }
 
