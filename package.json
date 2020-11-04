@@ -1,6 +1,6 @@
 {
-  "name": "fakturoid",
-  "version": "1.0.0",
+  "name": "fakturoid-js",
+  "version": "0.0.1",
   "description": "Fakturoid API v2 TypeScript implementation",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -29,6 +29,10 @@
     {
       "name": "Ali Nuraldin",
       "email": "ali@opium.team"
+    },
+    {
+      "name": "Timur Nyssanbayev",
+      "email": "timur@opium.team"
     }
   ],
   "license": "ISC",
